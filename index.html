@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dollyn - Editor de Vídeos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dpurple: '#7E22CE',
+                        dlight: '#D8B4FE',
+                        ddark: '#1E1B4B',
+                    },
+                    fontFamily: {
+                        sans: ['"Kanit"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .border-pixel {
+                border-style: solid;
+                border-width: 4px;
+                box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+            }
+            .glow {
+                animation: glow 2s ease-in-out infinite alternate;
+            }
+            @keyframes glow {
+                from { text-shadow: 0 0 10px #D8B4FE, 0 0 20px #7E22CE; }
+                to { text-shadow: 0 0 20px #fff, 0 0 30px #D8B4FE, 0 0 40px #7E22CE; }
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-ddark via-purple-900 to-black text-white font-sans">
 
+    <!-- HEADER -->
+    <header class="min-h-screen flex flex-col items-center justify-center text-center p-6 relative">
+        <div class="absolute w-72 h-72 bg-dpurple rounded-full blur-[100px] opacity-20"></div>
+        
+        <h1 class="text-5xl md:text-7xl font-extrabold text-dlight glow mb-2">Dollyn</h1>
+        <p class="text-xl md:text-2xl text-gray-300 font-light mb-10">Editor de Vídeos</p>
+        
+        <div class="bg-black/40 backdrop-blur-md p-8 border-pixel border-dpurple max-w-lg rounded-md">
+            <p class="text-lg leading-relaxed">
+                Especializado em <strong class="text-white">Minecraft</strong>, 
+                <strong class="text-yellow-400">Pixelmon</strong> e Mods! 
+                <br><br>
+                Editando há <strong class="text-dlight">2 Anos</strong> 
+                direto do <strong class="text-pink-400">CapCut</strong>.
+            </p>
+        </div>
+
+        <div class="mt-12 animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-dlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </header>
+
+    <!-- PORTFOLIO -->
+    <section class="py-20 px-6 max-w-4xl mx-auto">
+        <h2 class="text-4xl text-center font-bold text-dlight mb-16">Meu Trabalho</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+            <!-- VIDEO 1 -->
+            <div class="bg-black/40 backdrop-blur-md p-4 border-pixel border-dpurple rounded-md">
+                <div class="aspect-video bg-black/60 mb-4 rounded overflow-hidden">
+                    <video width="100%" height="100%" controls preload="auto" playsinline crossorigin="anonymous">
+                        <source src="https://cdn.discordapp.com/attachments/1499074930128453785/1502254428517044406/lv_0_20260418163934.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3 class="text-dlight text-xl font-bold">Pixelmon para Noah</h3>
+            </div>
+
+            <!-- VIDEO 2 -->
+            <div class="bg-black/40 backdrop-blur-md p-4 border-pixel border-dpurple rounded-md">
+                <div class="aspect-video bg-black/60 mb-4 rounded overflow-hidden">
+                    <video width="100%" height="100%" controls preload="auto" playsinline crossorigin="anonymous">
+                        <source src="https://cdn.discordapp.com/attachments/1499074930128453785/1502255303285018694/lv_0_20260419142331.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3 class="text-dlight text-xl font-bold">Pixelmon para Nice</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SHORTS -->
+    <section class="py-16 px-6 max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-dlight mb-10">Exemplos de Shorts</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            
+            <!-- Short 1 -->
+            <div class="bg-black/40 backdrop-blur-md p-4 border-pixel border-dpurple rounded-md">
+                <div class="aspect-[9/16] bg-black/60 mb-4 rounded overflow-hidden">
+                    <video width="100%" height="100%" controls preload="auto" playsinline crossorigin="anonymous">
+                        <source src="https://cdn.discordapp.com/attachments/1499074930128453785/1502255562791063632/lv_0_20260504133948.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3 class="text-dlight text-xl font-bold">Shorts para Vick</h3>
+            </div>
+
+            <!-- Short 2 -->
+            <div class="bg-black/40 backdrop-blur-md p-4 border-pixel border-dpurple rounded-md">
+                <div class="aspect-[9/16] bg-black/60 mb-4 rounded overflow-hidden">
+                    <video width="100%" height="100%" controls preload="auto" playsinline crossorigin="anonymous">
+                        <source src="https://cdn.discordapp.com/attachments/1499074930128453785/1502256577321631856/lv_0_20260505195459.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3 class="text-dlight text-xl font-bold">Shorts para Vick</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="py-16 px-6 max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-dlight mb-10">Meios de Comunicação</h2>
+        
+        <div class="inline-flex items-center gap-4 bg-black/40 backdrop-blur-md p-6 border-pixel border-dpurple rounded-md">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-dlight" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.317 4.37a9.7 9.7 0 0 0-2.466-.782.075.075 0 0 0-.079.038c-.18.306-.385.69-.524 1.012a9.28 9.28 0 0 0-4.244 0 11.22 11.22 0 0 0-.525-1.012.075.075 0 0 0-.079-.038c-.858.163-1.68.44-2.466.782a.07.07 0 0 0-.033.027C3.972 6.204 2.253 9.07 2 12.487c-.004.126.004.25.023.374.217 2.938 1.81 5.548 4.262 7.17a.075.075 0 0 0 .08.011 9.616 9.616 0 0 0 2.05-1.007.074.074 0 0 0 .022-.078 7.113 7.113 0 0 1-.353-1.215.074.074 0 0 0-.013-.038.074.074 0 0 0-.047-.023c-.034.007-.068.015-.101.024a7.137 7.137 0 0 0 3.86.994 7.137 7.137 0 0 0 3.86-.994c-.033-.009-.067-.017-.101-.024a.074.074 0 0 0-.047.023.074.074 0 0 0-.013.038c-.09.41-.207.807-.353 1.215a.074.074 0 0 0 .022.078 9.616 9.616 0 0 0 2.05 1.007.075.075 0 0 0 .08-.011c2.452-1.622 4.045-4.232 4.262-7.17a1.92 1.92 0 0 0 .023-.374c-.253-3.417-1.972-6.283-4.72-8.09a.07.07 0 0 0-.033-.027zM8.718 14.915c-.706 0-1.28-.617-1.28-1.375 0-.758.574-1.375 1.28-1.375.705 0 1.28.617 1.28 1.375 0 .758-.575 1.375-1.28 1.375zm6.564 0c-.706 0-1.28-.617-1.28-1.375 0-.758.574-1.375 1.28-1.375.705 0 1.28.617 1.28 1.375 0 .758-.575 1.375-1.28 1.375z"/>
+            </svg>
+            <span class="text-xl">Discord: <strong class="text-dlight">dollyn_ylord</strong></span>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t-4 border-dpurple bg-black/50">
+        <p class="text-dlight text-lg">© 2026 Dollyn ✨</p>
+    </footer>
+
+</body>
+</html>
